@@ -2,12 +2,13 @@ package com.TimeAndFees.Actions;
 
 import java.io.IOException;
 import java.time.Duration;
-
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,6 +22,22 @@ import com.TimeAndFees.Locators.LoginLocators;
 public class LoginActions {
 
 	LoginLocators loginLocators = null;
+	
+	@FindBy(xpath="//div[contains(@class,'outer-circle')]")
+	private WebElement OldEcoCircleContainer;
+	
+	@FindBy(xpath="//a[@href='/accounts/']/div[contains(text(),'Accounts Production')]")
+	private WebElement AccountsProduction_Module;
+	
+	@FindBy(xpath="//a[@href='/selfassessment/']/div[contains(text(),'Self Assessment')]")
+	private WebElement SelfAssessment_Module;
+	
+	@FindBy(xpath="//a[@href='/corporationtax/']/div[contains(text(),'Corporation Tax')]")
+	private WebElement CorporationTax_Module;
+	
+	@FindBy(xpath="//a[@href='/bookkeeping/']/div[contains(text(),'Bookkeeping')]")
+	private WebElement Bookkeeping_Module;
+	
 
 	public LoginActions() {
 		this.loginLocators = new LoginLocators();
@@ -50,14 +67,100 @@ public class LoginActions {
 		}
 	}
 
+//	public void navigateToTimeAndFeesModule() {
+//	    WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(2));
+//
+//	    try {
+//	        if (isElementVisible(loginLocators.TimeAndFees_Module, wait)) {
+//	            loginLocators.TimeAndFees_Module.click();
+//	            System.out.println("Navigated to TimeAndFees module from Homepage.");
+//	            return;
+//	        }
+//
+//	        if (isElementVisible(loginLocators.C_icon_inside_modules, wait)) {
+//	            loginLocators.C_icon_inside_modules.click();
+//	            wait.until(ExpectedConditions.visibilityOf(loginLocators.InsideCiconHome));
+//
+//	            if (isElementVisible(loginLocators.InsideCiconHome, wait)) {
+//	                loginLocators.InsideCiconHome.click();
+//	                System.out.println("Navigated to TimeAndFees module from inside 5.0 module.");
+//	                wait.until(ExpectedConditions.visibilityOf(loginLocators.TimeAndFees_Module));
+//	            }
+//
+//	            if (isElementVisible(loginLocators.TimeAndFees_Module, wait)) {
+//	                loginLocators.TimeAndFees_Module.click();
+//	                System.out.println("Navigated to TimeAndFees module from Homepage after C icon.");
+//	                return;
+//	            }
+//	        }
+//
+//	        if (isElementVisible(loginLocators.OldEcoTimeAndFees, wait)) {
+//	            loginLocators.OldEcoTimeAndFees.click();
+//	            System.out.println("Navigated to TimeAndFees module via Old EcoSpace.");
+//	            return;
+//	        }
+//
+//	        System.out.println("CorporationTax module could not be found in any known location.");
+//
+//	    } catch (Exception e) {
+//	        System.out.println("Error while navigating to CorporationTax module: " + e.getMessage());
+//	        Log.info("Error while navigating to CorporationTax module.", "Anwar", "Redirection To CorporationTax Module");
+//	    }
+//	}	
 	public void navigateToTimeAndFeesModule() {
-	    WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(2));
+	    WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(3));
 
 	    try {
 	        if (isElementVisible(loginLocators.TimeAndFees_Module, wait)) {
 	            loginLocators.TimeAndFees_Module.click();
 	            System.out.println("Navigated to TimeAndFees module from Homepage.");
 	            return;
+	        }
+	        List<WebElement> oldEcoModules = HelperClass.getDriver().findElements(
+	            By.xpath("//a/div[contains(@class,'circle') and " +
+	                     "(normalize-space()='Accounts Production' " +
+	                     "or normalize-space()='Self Assessment' " +
+	                     "or normalize-space()='Corporation Tax' " +
+	                     "or normalize-space()='Bookkeeping')]")
+	        );
+
+	        if (!oldEcoModules.isEmpty()) {
+	            System.out.println("Old Eco space detected. Found " + oldEcoModules.size() + " modules.");
+
+	            boolean clickedModule = false;
+
+	            for (WebElement module : oldEcoModules) {
+	                String classAttr = module.getAttribute("class");
+	                if (classAttr != null && (classAttr.contains("disabled") || classAttr.contains("lock"))) {
+	                    System.out.println("Skipping locked module: " + module.getText());
+	                    continue;
+	                }
+
+	                if (module.isDisplayed() && module.isEnabled()) {
+	                    System.out.println("Clicking Old Eco module: " + module.getText());
+	                    module.click();
+	                    clickedModule = true;
+	                    break;
+	                }
+	            }
+
+	            if (clickedModule) {
+	                if (isElementVisible(loginLocators.C_icon_inside_modules, wait)) {
+	                    loginLocators.C_icon_inside_modules.click();
+	                    wait.until(ExpectedConditions.visibilityOf(loginLocators.InsideCiconHome));
+
+	                    if (isElementVisible(loginLocators.InsideCiconHome, wait)) {
+	                        loginLocators.InsideCiconHome.click();
+	                        System.out.println("Navigated to Home from C icon after Old Eco.");
+	                    }
+
+	                    if (isElementVisible(loginLocators.TimeAndFees_Module, wait)) {
+	                        loginLocators.TimeAndFees_Module.click();
+	                        System.out.println("Navigated to TimeAndFees module after Old Eco redirection.");
+	                        return;
+	                    }
+	                }
+	            }
 	        }
 
 	        if (isElementVisible(loginLocators.C_icon_inside_modules, wait)) {
@@ -79,17 +182,20 @@ public class LoginActions {
 
 	        if (isElementVisible(loginLocators.OldEcoTimeAndFees, wait)) {
 	            loginLocators.OldEcoTimeAndFees.click();
-	            System.out.println("Navigated to TimeAndFees module via Old EcoSpace.");
+	            System.out.println("Navigated to TimeAndFees module via Old EcoSpace direct link.");
 	            return;
 	        }
 
-	        System.out.println("CorporationTax module could not be found in any known location.");
+	        System.out.println("TimeAndFees module could not be found in any known location.");
 
 	    } catch (Exception e) {
-	        System.out.println("Error while navigating to CorporationTax module: " + e.getMessage());
-	        Log.info("Error while navigating to CorporationTax module.", "Anwar", "Redirection To CorporationTax Module");
+	        System.out.println("Error while navigating to TimeAndFees module: " + e.getMessage());
+	        Log.info("Error while navigating to TimeAndFees module.", "Anwar", "Redirection To TimeAndFees Module");
 	    }
 	}
+
+
+
 
 
 	public void Logout() throws IOException {

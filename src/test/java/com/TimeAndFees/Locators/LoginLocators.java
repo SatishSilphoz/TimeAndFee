@@ -32,6 +32,7 @@ public class LoginLocators {
 
 	
 	
+	
 	@FindBy(xpath="//i[@class='icon fa fa-power-off']")
 	@CacheLookup
 	public WebElement Logout_element;
