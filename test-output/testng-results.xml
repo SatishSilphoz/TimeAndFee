@@ -1,47 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="6" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-04T16:50:16 IST" name="Default suite" finished-at="2025-09-04T16:51:25 IST" duration-ms="69025">
+  <suite started-at="2025-09-09T15:41:30 IST" name="Default suite" finished-at="2025-09-09T15:52:25 IST" duration-ms="654678">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_Login_Runner@f79e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-04T16:50:16 IST" name="Default test" finished-at="2025-09-04T16:51:25 IST" duration-ms="69025">
-      <class name="com.TimeAndFees.RunnerFiles.TimeAndFees_Login_Runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_Login_Runner@f79e]" started-at="2025-09-04T16:50:16 IST" name="setUpClass" finished-at="2025-09-04T16:50:19 IST" duration-ms="2831" status="PASS">
+    <test started-at="2025-09-09T15:41:30 IST" name="Default test" finished-at="2025-09-09T15:52:25 IST" duration-ms="654678">
+      <class name="com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:41:30 IST" name="setUpClass" finished-at="2025-09-09T15:41:37 IST" duration-ms="6597" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@230232b0]]>
+                <![CDATA[org.testng.TestRunner@27bf574b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_Login_Runner@f79e]" started-at="2025-09-04T16:50:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-04T16:51:24 IST" duration-ms="65366" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:41:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:44:52 IST" duration-ms="194745" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login into Capium Application"]]>
+                <![CDATA["Creation of expense and verify"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Time And Fees Module"]]>
+                <![CDATA["TimeandFees Account menu section"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_Login_Runner@f79e]" started-at="2025-09-04T16:51:24 IST" name="tearDownClass" finished-at="2025-09-04T16:51:25 IST" duration-ms="781" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:44:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:45:10 IST" duration-ms="18202" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate history panel in activity"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <mat-icon _ngcontent-vcy-c132="" role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (993, 28). Other element would receive the click: <div _ngcontent-vcy-c30="" class="ngx-spinner-overlay ng-tns-c30-0 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [989a8d4d003779357b629d8ed5c116b1, clickElement {id=f.C0196952AB94000E06231C1F9765DB8D.d.2F6FA95C6C2A45E5EC17D5FADA2E35E3.e.813}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\LOCAL_~1.SIL\Temp\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51041/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (989a8d4d003779357b629d8ed5c116b1)] -> xpath: //mat-icon[contains(text(),'history')]]
+Session ID: 989a8d4d003779357b629d8ed5c116b1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-vcy-c132="" role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (993, 28). Other element would receive the click: <div _ngcontent-vcy-c30="" class="ngx-spinner-overlay ng-tns-c30-0 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [989a8d4d003779357b629d8ed5c116b1, clickElement {id=f.C0196952AB94000E06231C1F9765DB8D.d.2F6FA95C6C2A45E5EC17D5FADA2E35E3.e.813}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\LOCAL_~1.SIL\Temp\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51041/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (989a8d4d003779357b629d8ed5c116b1)] -> xpath: //mat-icon[contains(text(),'history')]]
+Session ID: 989a8d4d003779357b629d8ed5c116b1
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy45.click(Unknown Source)
+at com.TimeAndFees.Actions.AccountMenuActions.click_on_histroy_button(AccountMenuActions.java:47)
+at com.TimeAndFees.Stepdefinations.AccountMenuStepDef.click_on_histroy_button(AccountMenuStepDef.java:23)
+at ✽.click on history button(file:///C:/Users/satishkumar.silphoz/Documents/2024Automation/TimeAndFees/TimeAndFees/src/test/resources/TimeAndFees_FeatuteFiles/TimeAndFees_AccountMenu.feature:34)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:45:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:46:10 IST" duration-ms="60027" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating serach functionality in activity page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:46:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:47:38 IST" duration-ms="88058" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating all dropdown functionality in activity page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:47:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:49:03 IST" duration-ms="84526" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating time period dropdown functionality in activity page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:49:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:49:18 IST" duration-ms="15398" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating Announcment page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:49:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:50:39 IST" duration-ms="81394" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["creation of ticket"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //mat-icon[normalize-space()='confirmation_number']//parent::a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\LOCAL_~1.SIL\Temp\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51041/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 989a8d4d003779357b629d8ed5c116b1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-icon[normalize-space()='confirmation_number']//parent::a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\LOCAL_~1.SIL\Temp\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51041/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 989a8d4d003779357b629d8ed5c116b1
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.TimeAndFees.Actions.AccountMenuActions.click_on_ticket_button(AccountMenuActions.java:206)
+at com.TimeAndFees.Stepdefinations.AccountMenuStepDef.click_on_ticket_button(AccountMenuStepDef.java:132)
+at ✽.click on ticket button(file:///C:/Users/satishkumar.silphoz/Documents/2024Automation/TimeAndFees/TimeAndFees/src/test/resources/TimeAndFees_FeatuteFiles/TimeAndFees_AccountMenu.feature:66)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:50:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:51:14 IST" duration-ms="34816" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validate status dropdown funtionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='txtusername']"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [989a8d4d003779357b629d8ed5c116b1, findElement {using=xpath, value=//input[@id='txtusername']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\LOCAL_~1.SIL\Temp\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51041/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 989a8d4d003779357b629d8ed5c116b1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='txtusername']"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [989a8d4d003779357b629d8ed5c116b1, findElement {using=xpath, value=//input[@id='txtusername']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\LOCAL_~1.SIL\Temp\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51041/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 989a8d4d003779357b629d8ed5c116b1
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy45.clear(Unknown Source)
+at com.TimeAndFees.Actions.LoginActions.EnterUsername(LoginActions.java:48)
+at com.TimeAndFees.Stepdefinations.LoginStepDefination.user_enter_username(LoginStepDefination.java:37)
+at ✽.User Enter username and password(file:///C:/Users/satishkumar.silphoz/Documents/2024Automation/TimeAndFees/TimeAndFees/src/test/resources/TimeAndFees_FeatuteFiles/TimeAndFees_AccountMenu.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:51:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-09T15:52:24 IST" duration-ms="69718" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validate change colors"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TimeandFees Account menu section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner@f79e]" started-at="2025-09-09T15:52:24 IST" name="tearDownClass" finished-at="2025-09-09T15:52:25 IST" duration-ms="1098" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.TimeAndFees.RunnerFiles.TimeAndFees_Login_Runner -->
+      </class> <!-- com.TimeAndFees.RunnerFiles.TimeAndFees_AccountMenu_Runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 	    features = "src\\test\\resources\\TimeAndFees_FeatuteFiles\\TimeAndFees_AccountMenu.feature",
 	    glue = "com.TimeAndFees.Stepdefinations",
-	    tags = "@Rerun",
+	    tags = "@AccountMenu",
 	    plugin = {
 	        "pretty",
 	        "html:target/cucumber-reports/CucumberReport.html",
